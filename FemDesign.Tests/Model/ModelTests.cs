@@ -125,7 +125,7 @@ namespace FemDesign.Tests
         /// To check which version the test file was generated in check source software attribute in file.
         /// </summary>
         [TestMethod("getBars Regular Beam")]
-        public void testingRegularBeam()
+        public void TestingRegularBeam()
         {
             // string input = "Model/global-test-model.struxml";
             string input = "C:/temp/simpleBeam.struxml";
@@ -138,7 +138,7 @@ namespace FemDesign.Tests
         /// To check which version the test file was generated in check source software attribute in file.
         /// </summary>
         [TestMethod("getBars Composite and Complex")]
-        public void testingComplexComposite()
+        public void TestingComplexComposite()
         {
             // string input = "Model/global-test-model.struxml";
             string input = "C:/temp/composite.struxml";
@@ -146,6 +146,14 @@ namespace FemDesign.Tests
             Console.Write(model.SerializeToString());
         }
 
+        [TestMethod("Deserialise Axis")]
+        public void AxisDeserialisation()
+        {
+            // string input = "Model/global-test-model.struxml";
+            string input = "C:/temp/Exempelbyggnad_Revit.struxml";
+            Model model = Model.DeserializeFromFilePath(input);
+            Console.Write(model.SerializeToString());
+        }
 
     }
 }
