@@ -100,8 +100,7 @@ namespace FemDesign.Tests
         [TestMethod("ReadWriteConsole")]
         public void ReadWriteConsole()
         {
-            // string input = "Model/global-test-model.struxml";
-            string input = "C:/temp/simpleBeam.struxml";
+            string input = "Model/global-test-model.struxml";
             Model model = Model.DeserializeFromFilePath(input);
             Console.Write(model.SerializeToString());
         }
@@ -115,7 +114,7 @@ namespace FemDesign.Tests
         public void ReadWriteFile()
         {
             string input = "Model/global-test-model.struxml";
-            string output = "Model/global-test-model-out.struxml";
+            string output = "Model/readWriteFile.struxml";
             Model model = Model.DeserializeFromFilePath(input);
             model.SerializeModel(output);
         }
