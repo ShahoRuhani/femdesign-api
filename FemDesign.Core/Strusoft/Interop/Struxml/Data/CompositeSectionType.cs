@@ -14,6 +14,6 @@ namespace StruSoft.Interop.StruXml.Data
     public partial class Composite_section_type
     {
         [XmlIgnore]
-        public StruSoft.Interop.StruXml.Data.Composite_data compositeSectionDataObj { get; set; }
+        public StruSoft.Interop.StruXml.Data.Composite_data CompositeSectionDataObj { get; set; }
     }
 }
