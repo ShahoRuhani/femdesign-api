@@ -40,10 +40,10 @@ namespace FemDesign.Grasshopper
             for(int i = 0; i < ComplexComposite.Composite_section.Count; i++)
             {
                 var item = ComplexComposite.Composite_section[i];
-                foreach (var obj in item.compositeSectionDataObj.Part)
+                foreach (var obj in item.CompositeSectionDataObj.Part)
                 {
-                    material.Add(obj.materialObj, new GH_Path(i));
-                    section.Add(obj.sectionObj, new GH_Path(i));
+                    material.Add(obj.MaterialObj, new GH_Path(i));
+                    section.Add(obj.SectionObj, new GH_Path(i));
                 }
             }
 
